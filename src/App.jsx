@@ -64,7 +64,7 @@ function App() {
       <header>
         <div className={`theme-toggle ${isDarkTheme ? "dark" : ""}`} onClick={toggleTheme}>
           <div className="slider"></div>
-        Night Mode</div>
+        </div>
       </header>
 
       <main>
