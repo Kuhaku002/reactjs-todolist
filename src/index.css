@@ -1,0 +1,198 @@
+/* Global Styles */
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #e0e0e0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: 'Press Start 2P', system-ui;
+}
+
+/* Light Theme */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: #f0f4ff; /* Softer blue background */
+  gap: 14px;
+}
+
+header {
+  display: flex;
+  align-items: stretch;
+}
+
+header,
+.main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+  background-color: #ffffff; /* Clean white input field */
+  color: #202124;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+header button {
+  border-radius: 14px;
+  background: #007bff; /* Brighter button color */
+  color: #080808;
+  transition-duration: 200ms;
+  cursor: pointer;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+header button:hover {
+  opacity: 0.5;
+}
+
+header button,
+header input {
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+}
+
+p {
+  font-size: 0.9em;
+  color: #444;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 25px;
+  background: #ffffff; /* Simple white card for items */
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for a card effect */
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.actionsContainer button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #007bff; /* Blue icon buttons */
+}
+
+.actionsContainer button:hover {
+  opacity: 0.7;
+}
+
+/* Dark Theme */
+.dark {
+  background-color: #181a1b; /* Dark charcoal background */
+  color: #e0e0e0; /* Light grey text for readability */
+}
+
+.dark #root {
+  background-color: #121212; /* Darker, smooth background */
+}
+
+.dark header input,
+.dark header button {
+  background-color: #282828; /* Subtle dark grey input and button */
+  color: #f0f0f0; /* Light text for contrast */
+}
+
+.dark .todoItem {
+  background-color: #333; /* Medium dark grey for to-do items */
+  color: #fafafa; /* Very light grey for excellent contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow to lift items */
+}
+
+.dark .todoItem p {
+  color: #fafafa; /* Ensure text is bright and readable */
+}
+
+.dark .actionsContainer button {
+  color: #4fc3f7; /* Light cyan for button icons */
+}
+
+.dark header button {
+  background-color: #4fc3f7; /* Cyan button for contrast */
+  color: #ffffff;
+}
+
+.dark header button:hover {
+  background-color: #00b0ff; /* Brighter on hover */
+}
+
+/* Theme Toggle Switch */
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background-color: #4fc3f7;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.theme-toggle.dark {
+  background-color: #bb86fc; /* Muted purple toggle for dark mode */
+}
+
+.theme-toggle .slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+}
+
+.theme-toggle.dark .slider {
+  left: 26px;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
